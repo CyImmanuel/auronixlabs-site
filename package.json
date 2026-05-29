@@ -1,0 +1,26 @@
+{
+  "name": "auronixlabs-site",
+  "version": "1.0.0",
+  "description": "AuronixLabs - AI & Web3 Innovation",
+  "scripts": {
+    "test": "echo \"No tests specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CyImmanuel/auronixlabs-site.git"
+  },
+  "keywords": [
+    "ai",
+    "web3",
+    "auronix"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CyImmanuel/auronixlabs-site/issues"
+  },
+  "homepage": "https://github.com/CyImmanuel/auronixlabs-site#readme",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  }
+}
