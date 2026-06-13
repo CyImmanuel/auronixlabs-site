@@ -305,7 +305,7 @@
             <p class="text-slate-400 font-light">Our intelligence team will review your brief and contact you shortly.</p>
         </div>
 
-        <form id="consultation-form" action="https://formspree.io/f/mreddlew" method="POST" class="space-y-6 bg-slate-900/40 border border-slate-800 p-8 rounded-3xl backdrop-blur-md shadow-2xl" data-aos="fade-up" data-aos-delay="200">
+        <form id="consultation-form" action="[https://hook.us2.make.com/mpzp6h24z2srome995yhxq86uoduo8ch]" method="POST" class="space-y-6 bg-slate-900/40 border border-slate-800 p-8 rounded-3xl backdrop-blur-md shadow-2xl" data-aos="fade-up" data-aos-delay="200">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                     <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Your Name</label>
@@ -409,58 +409,6 @@
         // 🟢 LIVE NEWSDATA.IO API FETCH 🟢
         async function fetchLiveNews() {
             const apiKey = 'pub_1e27f68fd2b14d1980b0033e0448b3f4';
-            const url = `https://newsdata.io/api/1/news?apikey=${apiKey}&q="Artificial Intelligence" OR "Crypto"&language=en`;
-            
-            try {
-                const response = await fetch(url);
-                const data = await response.json();
-                
-                if (data.status === "success" && data.results && data.results.length > 0) {
-                    const newsContainer = document.getElementById('news-container');
-                    newsContainer.innerHTML = ''; 
-                    
-                    const articles = data.results.slice(0, 3);
-                    
-                    const themes = [
-                        { bg: 'bg-cyan-950/50', border: 'border-cyan-800/40', text: 'text-cyan-400', hover: 'hover:border-cyan-500/30' },
-                        { bg: 'bg-blue-950/50', border: 'border-blue-800/40', text: 'text-blue-400', hover: 'hover:border-blue-500/30' },
-                        { bg: 'bg-indigo-950/50', border: 'border-indigo-800/40', text: 'text-indigo-400', hover: 'hover:border-indigo-500/30' }
-                    ];
-
-                    articles.forEach((article, index) => {
-                        const theme = themes[index % themes.length];
-                        
-                        const pubDate = new Date(article.pubDate);
-                        const timeString = pubDate.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
-                        
-                        const source = article.source_id || 'Tech News';
-                        const link = article.link || '#';
-                        const desc = article.description || 'Click to access full intelligence report...';
-                        
-                        const articleHTML = `
-                            <article onclick="window.open('${link}', '_blank')" class="p-4 rounded-2xl bg-[#020617]/60 border border-slate-800/60 ${theme.hover} transition group cursor-pointer">
-                                <div class="flex gap-2 mb-2">
-                                    <span class="text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 ${theme.bg} ${theme.text} border ${theme.border} rounded-md truncate max-w-[120px]">
-                                        ${source}
-                                    </span>
-                                    <span class="text-[10px] text-slate-500 font-mono self-center ml-auto whitespace-nowrap">${timeString}</span>
-                                </div>
-                                <h4 class="text-sm font-bold text-slate-200 group-hover:${theme.text} transition leading-snug mb-1 line-clamp-2">${article.title}</h4>
-                                <p class="text-xs text-slate-400 font-light line-clamp-2">${desc}</p>
-                            </article>
-                        `;
-                        newsContainer.innerHTML += articleHTML;
-                    });
-                }
-            } catch (error) {
-                console.log("Could not fetch live news, keeping fallbacks active.");
-            }
-        }
-        
-        // Active Fetch
-        // 🟢 LIVE NEWSDATA.IO API FETCH 🟢
-        async function fetchLiveNews() {
-            const apiKey = 'pub_1e27f68fd2b14d1980b0033e0448b3f4';
             
             // FIX: We must "URL Encode" the search query so the browser doesn't break on the spaces
             const searchQuery = encodeURIComponent('Artificial Intelligence OR Crypto');
@@ -510,48 +458,46 @@
                     console.error("Newsdata API connected, but returned no articles:", data);
                 }
             } catch (error) {
-                // Now it will output the exact error to your browser console if it fails again
                 console.error("CRITICAL ERROR: Could not fetch live news:", error);
             }
         }
-        
-        // Active Fetch
-        fetchLiveNews();;
+        fetchLiveNews();
 
-        // 🟢 AJAX FORM SUBMISSION (No Redirect) 🟢
+        // 🟢 AJAX FORM SUBMISSION (MAKE.COM DIRECT INTEGRATION) 🟢
         const form = document.getElementById("consultation-form");
         const successMessage = document.getElementById("form-success");
 
-        form.addEventListener("submit", async function(event) {
-            event.preventDefault(); 
-            
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalBtnText = submitBtn.innerText;
-            submitBtn.innerText = "Transmitting..."; 
-            
-            const data = new FormData(event.target);
-            
-            try {
-                const response = await fetch(event.target.action, {
-                    method: form.method,
-                    body: data,
-                    headers: { 'Accept': 'application/json' }
-                });
+        if(form) {
+            form.addEventListener("submit", async function(event) {
+                event.preventDefault(); 
                 
-                if (response.ok) {
-                    form.reset(); 
-                    form.style.display = "none"; 
-                    successMessage.classList.remove("hidden"); 
-                    successMessage.classList.add("flex");
-                } else {
-                    submitBtn.innerText = "Error - Please Try Again";
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalBtnText = submitBtn.innerText;
+                submitBtn.innerText = "Transmitting..."; 
+                
+                const data = new FormData(event.target);
+                
+                try {
+                    const response = await fetch(event.target.action, {
+                        method: form.method,
+                        body: data
+                    });
+                    
+                    if (response.ok) {
+                        form.reset(); 
+                        form.style.display = "none"; 
+                        successMessage.classList.remove("hidden"); 
+                        successMessage.classList.add("flex");
+                    } else {
+                        submitBtn.innerText = "Error - Please Try Again";
+                        setTimeout(() => submitBtn.innerText = originalBtnText, 3000);
+                    }
+                } catch (error) {
+                    submitBtn.innerText = "Network Error - Try Again";
                     setTimeout(() => submitBtn.innerText = originalBtnText, 3000);
                 }
-            } catch (error) {
-                submitBtn.innerText = "Network Error - Try Again";
-                setTimeout(() => submitBtn.innerText = originalBtnText, 3000);
-            }
-        });
+            });
+        }
     </script>
 </body>
 </html>
