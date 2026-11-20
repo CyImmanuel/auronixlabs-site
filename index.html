@@ -335,7 +335,7 @@
             <p class="text-slate-400 font-light">Your request was sent to our team. We’ll follow up by email.</p>
         </div>
 
-        <form id="consultation-form" action="https://hook.us2.make.com/mpzp6h24z2srome995yhxq86uoduo8ch" method="POST" class="space-y-6 bg-slate-900/40 border border-slate-800 p-8 rounded-3xl backdrop-blur-md shadow-2xl" data-aos="fade-up" data-aos-delay="200">
+        <form id="consultation-form" action="https://auronixlabs-consultation-api.onrender.com/consultation" method="POST" class="space-y-6 bg-slate-900/40 border border-slate-800 p-8 rounded-3xl backdrop-blur-md shadow-2xl" data-aos="fade-up" data-aos-delay="200">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                     <label for="Client_Name" class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Your Name</label>
@@ -698,17 +698,18 @@
             }
             submit.disabled = true;
             submit.textContent = 'Sending…';
-            status.textContent = 'Sending your consultation request.';
+            status.textContent = 'Sending your consultation request. This may take up to a minute on the first submission.';
             try {
                 const response = await fetch(form.action, {
                     method: 'POST',
-                    body: new FormData(form),
-                    signal: AbortSignal.timeout(15000)
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(Object.fromEntries(new FormData(form))),
+                    signal: AbortSignal.timeout(100000)
                 });
                 if (!response.ok) throw new Error('Request failed');
                 const result = await response.json().catch(() => null);
                 if (result?.delivered !== true) {
-                    status.textContent = 'Your request reached our system, but email delivery could not be confirmed. Please contact us using the email link below.';
+                    status.textContent = 'We couldn’t confirm your request. Please contact us using the email link below.';
                     return;
                 }
                 form.reset();
