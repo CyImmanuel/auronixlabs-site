@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Immanuel;Cyril;;;
+FN:Cyril Immanuel
+ORG:Auronixlab
+TITLE:Founder
+EMAIL;TYPE=WORK,INTERNET:cyril.immanuel@auronixlab.com
+TEL;TYPE=WORK,VOICE:+250796159900
+URL:https://auronixlab.com/
+END:VCARD
