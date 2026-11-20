@@ -2,25 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AuronixLabs | Enterprise AI & Workflow Automation Agency</title>
     
     <link rel="icon" type="image/png" href="favicon.png"> 
     
     <meta name="description" content="We build custom AI agents, automate corporate workflows, and deploy intelligent business systems. Scale your operations with AuronixLabs, Kigali's premier AI agency." />
     <meta name="keywords" content="AI automation, custom AI agents, business workflow automation, corporate AI solutions, tech consulting, Kigali tech, web3 solutions" />
-    <link rel="canonical" href="https://www.auronixlabs.com/" />
+    <link rel="canonical" href="https://auronixlab.com/" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.auronixlabs.com/" />
+    <meta property="og:url" content="https://auronixlab.com/" />
     <meta property="og:title" content="AuronixLabs | Enterprise AI & Workflow Automation" />
     <meta property="og:description" content="Stop doing manual data entry. We build custom AI workforces that operate your business 24/7." />
-    <meta property="og:image" content="https://www.auronixlabs.com/images/social-preview.png" />
+    <meta property="og:image" content="https://auronixlab.com/logo.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://www.auronixlabs.com/" />
+    <meta name="twitter:url" content="https://auronixlab.com/" />
     <meta name="twitter:title" content="AuronixLabs | Enterprise AI & Workflow Automation" />
     <meta name="twitter:description" content="Stop doing manual data entry. We build custom AI workforces that operate your business 24/7." />
-    <meta name="twitter:image" content="https://www.auronixlabs.com/images/social-preview.png" />
+    <meta name="twitter:image" content="https://auronixlab.com/logo.png" />
     
     <script type="application/ld+json">
     {
@@ -28,7 +29,7 @@
       "@type": "ProfessionalService",
       "name": "AuronixLabs",
       "description": "Enterprise AI development and workflow automation agency.",
-      "url": "https://www.auronixlabs.com",
+      "url": "https://auronixlab.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Kigali",
@@ -43,7 +44,6 @@
     }
     </script>
     
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
@@ -137,12 +137,8 @@
                 Organic Tech Infrastructure
             </span>
             
-            <h1 class="text-5xl md:text-7xl font-black tracking-tighter leading-none mb-8">
-                Making brands and businesses more <br>
-               <span class="text-cyan-400 drop-shadow-[0_0_25px_rgba(34,211,238,0.8)]">
-                    smart and profitable
-                </span>
-            </h1>
+            <h1 id="service-headline" class="text-4xl md:text-7xl font-black tracking-tighter leading-none mb-8 text-cyan-400 min-h-[3em]">AI automation for the work your team repeats every day</h1>
+            <button id="toggle-headlines" type="button" hidden class="mb-6 text-sm text-cyan-300 underline">Pause service rotation</button>
             
             <p class="text-lg md:text-xl text-slate-400 mb-12 max-w-3xl mx-auto leading-relaxed font-light" data-aos="fade-up" data-aos-delay="200">
                 AuronixLabs empowers businesses and brands to optimize workflows, deploy custom AI solutions, transition to digital infrastructure, and leverage predictive data analytics.
@@ -150,7 +146,7 @@
             
             <div class="flex flex-col sm:flex-row justify-center gap-6" data-aos="zoom-in" data-aos-delay="400">
                 <a href="#contact" class="px-8 py-4 bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 rounded-xl font-bold shadow-xl shadow-cyan-500/20 hover:scale-105 transition transform duration-300">
-                    Optimize Your Workflow
+                    Request a consultation
                 </a>
                 <a href="#dashboard" class="px-8 py-4 bg-slate-900/50 border border-slate-800 rounded-xl font-semibold hover:border-cyan-500/50 backdrop-blur-sm transition duration-300">
                     Enter the Intelligence Hub
@@ -327,47 +323,51 @@
                     
     <section id="contact" class="relative z-10 max-w-3xl mx-auto px-6 py-24 border-t border-slate-900">
         <div class="text-center mb-12" data-aos="fade-up">
-            <h2 class="text-4xl font-extrabold mb-4 tracking-tight">Initiate a Consultation</h2>
+            <h2 class="text-4xl font-extrabold mb-4 tracking-tight">Request a consultation</h2>
             <p class="text-slate-400 font-light">Tell us about your current operational challenges. Let's build a customized solution.</p>
         </div>
 
-        <div id="form-success" class="hidden flex-col items-center justify-center p-12 bg-slate-900/40 border border-cyan-500/50 rounded-3xl backdrop-blur-md shadow-[0_0_30px_rgba(6,182,212,0.15)] text-center space-y-4">
+        <div id="form-success" tabindex="-1" class="hidden flex-col items-center justify-center p-12 bg-slate-900/40 border border-cyan-500/50 rounded-3xl backdrop-blur-md shadow-[0_0_30px_rgba(6,182,212,0.15)] text-center space-y-4">
             <div class="w-16 h-16 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 mb-2">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
             </div>
             <h3 class="text-2xl font-bold text-slate-100">Request Received</h3>
-            <p class="text-slate-400 font-light">Our intelligence team will review your brief and contact you shortly.</p>
+            <p class="text-slate-400 font-light">Your request was accepted. Our team will follow up by email.</p>
         </div>
 
-        <form id="consultation-form" action="[https://hook.us2.make.com/mpzp6h24z2srome995yhxq86uoduo8ch]" method="POST" class="space-y-6 bg-slate-900/40 border border-slate-800 p-8 rounded-3xl backdrop-blur-md shadow-2xl" data-aos="fade-up" data-aos-delay="200">
+        <form id="consultation-form" action="https://hook.us2.make.com/mpzp6h24z2srome995yhxq86uoduo8ch" method="POST" class="space-y-6 bg-slate-900/40 border border-slate-800 p-8 rounded-3xl backdrop-blur-md shadow-2xl" data-aos="fade-up" data-aos-delay="200">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Your Name</label>
-                    <input type="text" name="Client_Name" placeholder="John Doe" required class="w-full bg-[#020617] border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-cyan-500 transition shadow-inner">
+                    <label for="Client_Name" class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Your Name</label>
+                    <input type="text" name="Client_Name" id="Client_Name" autocomplete="name" maxlength="120" placeholder="John Doe" required class="w-full bg-[#020617] border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-cyan-500 transition shadow-inner">
                 </div>
                 <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Business Email</label>
-                    <input type="email" name="Client_Email" placeholder="john@company.com" required class="w-full bg-[#020617] border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-cyan-500 transition shadow-inner">
+                    <label for="Client_Email" class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Business Email</label>
+                    <input type="email" name="Client_Email" id="Client_Email" autocomplete="email" maxlength="254" placeholder="john@company.com" required class="w-full bg-[#020617] border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-cyan-500 transition shadow-inner">
                 </div>
             </div>
             <div>
-                <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Primary Need</label>
-                <select name="Service_Requested" class="w-full bg-[#020617] border border-slate-800 rounded-xl px-4 py-3 text-slate-400 focus:outline-none focus:border-cyan-500 transition shadow-inner">
+                <label for="Service_Requested" class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Primary Need</label>
+                <select name="Service_Requested" id="Service_Requested" required class="w-full bg-[#020617] border border-slate-800 rounded-xl px-4 py-3 text-slate-400 focus:outline-none focus:border-cyan-500 transition shadow-inner">
+                    <option value="" selected disabled>Select a service</option>
                     <option value="AI Workflow Automation">AI Workflow Automation</option>
                     <option value="Process Optimization">Process Optimization</option>
                     <option value="Manual to Digital Transition">Manual to Digital Transition</option>
                     <option value="Web3 & Crypto Solutions">Web3 & Crypto Solutions</option>
                     <option value="Custom AI Solutions & Robotics">Custom AI Solutions & Robotics</option>
                     <option value="Data Analytics & Predictive Insights">Data Analytics & Predictive Insights</option>
+                    <option value="Help me choose">Help me choose</option>
                 </select>
             </div>
             <div>
-                <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Project Brief</label>
-                <textarea rows="4" name="Project_Details" placeholder="Describe your workflows or systems..." required class="w-full bg-[#020617] border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-cyan-500 transition shadow-inner"></textarea>
+                <label for="Project_Details" class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Project Brief</label>
+                <textarea rows="4" name="Project_Details" id="Project_Details" maxlength="3000" placeholder="Choose a service to draft your message, or write your own." required class="w-full bg-[#020617] border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-cyan-500 transition shadow-inner"></textarea>
             </div>
             <button type="submit" class="w-full py-4 bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 rounded-xl font-bold shadow-lg shadow-cyan-500/20 hover:opacity-90 hover:scale-[1.02] transition duration-300 cursor-pointer text-white tracking-wide">
-                Submit Discovery Request
+                Send consultation request
             </button>
+            <p id="consultation-status" role="status" class="text-sm text-slate-300"></p>
+            <p class="text-sm text-slate-400">Prefer email? <a class="text-cyan-300 underline" href="mailto:cyril.immanuel@auronixlab.com">Contact AuronixLabs</a>.</p>
         </form>
     </section>
 
@@ -413,7 +413,7 @@
     
     <script>
         // 1. Initialize Scroll Animations
-        AOS.init({
+        window.AOS?.init({
             duration: 800,
             once: true,
             offset: 50
@@ -457,61 +457,61 @@
         fetchCryptoPrices();
         setInterval(fetchCryptoPrices, 60000); 
 
-        // 3. LIVE TECH & CRYPTO NEWS FETCH
+        // Load each topic independently so one upstream outage leaves the others available.
+        const newsSources = [
+            { topic: 'AI', name: 'TechCrunch', feed: 'https://techcrunch.com/category/artificial-intelligence/feed/', page: 'https://techcrunch.com/category/artificial-intelligence/' },
+            { topic: 'Crypto', name: 'Cointelegraph', feed: 'https://cointelegraph.com/rss', page: 'https://cointelegraph.com/' },
+            { topic: 'Technology', name: 'The Verge', feed: 'https://www.theverge.com/rss/index.xml', page: 'https://www.theverge.com/' }
+        ];
+        const latestStories = new Map();
+
         async function fetchLiveNews() {
-            const newsContainer = document.getElementById('live-news-feed');
-            if (!newsContainer) return;
+            const container = document.getElementById('live-news-feed');
+            if (!container) return;
 
-            try {
-                const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://cointelegraph.com/rss');
+            await Promise.allSettled(newsSources.map(async source => {
+                const endpoint = new URL('https://api.rss2json.com/v1/api.json');
+                endpoint.searchParams.set('rss_url', source.feed);
+                const response = await fetch(endpoint, { signal: AbortSignal.timeout(10000) });
+                if (!response.ok) return;
                 const data = await response.json();
-
-                if (data.status === 'ok') {
-                    newsContainer.innerHTML = ''; 
-                    
-                    const articles = data.items.slice(0, 3);
-                    
-                    articles.forEach((article, index) => {
-                        const themes = [
-                            { bg: 'bg-cyan-950/50', text: 'text-cyan-400', border: 'border-cyan-800/40', hover: 'hover:border-cyan-500/30', hoverText: 'group-hover:text-cyan-400', tag: 'AI & TECH' },
-                            { bg: 'bg-blue-950/50', text: 'text-blue-400', border: 'border-blue-800/40', hover: 'hover:border-blue-500/30', hoverText: 'group-hover:text-blue-400', tag: 'WEB3 ARCH' },
-                            { bg: 'bg-indigo-950/50', text: 'text-indigo-400', border: 'border-indigo-800/40', hover: 'hover:border-indigo-500/30', hoverText: 'group-hover:text-indigo-400', tag: 'MARKETS' }
-                        ];
-                        const t = themes[index % themes.length];
-                        
-                        const pubDate = new Date(article.pubDate);
-                        const now = new Date();
-                        const diffHours = Math.round((now - pubDate) / (1000 * 60 * 60));
-                        const timeString = diffHours < 1 ? 'JUST NOW' : diffHours + ' HRS AGO';
-
-                        const stripHtml = (html) => {
-                            let tmp = document.createElement("DIV");
-                            tmp.innerHTML = html;
-                            return tmp.textContent || tmp.innerText || "";
-                        };
-                        const cleanDesc = stripHtml(article.description).substring(0, 100) + '...';
-
-                        const articleHTML = `
-                            <article onclick="window.open('${article.link}', '_blank')" class="p-4 rounded-2xl bg-[#020617]/60 border border-slate-800/60 ${t.hover} transition group cursor-pointer">
-                                <div class="flex gap-2 mb-2">
-                                    <span class="text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 ${t.bg} ${t.text} border ${t.border} rounded-md">${t.tag}</span>
-                                    <span class="text-[10px] text-slate-500 font-mono self-center ml-auto">${timeString}</span>
-                                </div>
-                                <h4 class="text-sm font-bold text-slate-200 ${t.hoverText} transition leading-snug mb-1">${article.title}</h4>
-                                <p class="text-xs text-slate-400 font-light line-clamp-2">${cleanDesc}</p>
-                            </article>
-                        `;
-                        newsContainer.innerHTML += articleHTML;
-                    });
+                if (data.status !== 'ok' || !Array.isArray(data.items)) return;
+                for (const item of data.items) {
+                    if (typeof item?.link !== 'string' || typeof item.title !== 'string' || !item.title.trim()) continue;
+                    let link;
+                    try {
+                        link = new URL(item.link);
+                    } catch {
+                        continue;
+                    }
+                    if (link.protocol !== 'https:') continue;
+                    latestStories.set(source.topic, { link: link.href, title: item.title, date: item.pubDate });
+                    break;
                 }
-            } catch (error) {
-                console.error("News feed failed to load:", error);
-                newsContainer.innerHTML = '<div class="text-xs text-rose-500 text-center font-mono">FEED DISCONNECTED</div>';
-            }
+            }));
+
+            const cards = newsSources.map(source => {
+                const story = latestStories.get(source.topic);
+                const card = document.createElement('a');
+                card.href = story?.link ?? source.page;
+                card.target = '_blank';
+                card.rel = 'noopener noreferrer';
+                card.className = 'block p-4 rounded-2xl bg-[#020617]/60 border border-slate-800/60 hover:border-cyan-500/30 transition group';
+                const label = document.createElement('span');
+                const date = new Date(story?.date);
+                label.className = 'text-[10px] uppercase font-bold tracking-widest text-cyan-400';
+                label.textContent = [source.topic, source.name, Number.isFinite(date.getTime()) ? date.toLocaleDateString() : ''].filter(Boolean).join(' · ');
+                const title = document.createElement('h4');
+                title.className = 'mt-2 text-sm font-bold text-slate-200 group-hover:text-cyan-400 leading-snug';
+                title.textContent = story?.title ?? 'Browse the latest headlines';
+                card.append(label, title);
+                return card;
+            });
+            container.replaceChildren(...cards);
         }
         fetchLiveNews();
         setInterval(fetchLiveNews, 900000);
-        
+
         // 4. BLOG MODAL CONTROLLER
         function closeBlogModal() {
             const modal = document.getElementById('blog-modal');
@@ -523,6 +523,12 @@
         }
 
         // 5. LIVE BLOG FETCH (SMART TITLES & CLICK-TO-READ)
+        function escapeText(value) {
+            const node = document.createElement('span');
+            node.textContent = value;
+            return node.innerHTML;
+        }
+
         function fetchAeroBlog() {
             const blogContainer = document.getElementById('blog-container');
             if (!blogContainer) return;
@@ -580,11 +586,11 @@
 
                         const articleHTML = `
                             <div class="flex justify-between items-center mb-6">
-                                <span class="text-[10px] uppercase font-bold tracking-widest px-3 py-1.5 bg-teal-950/30 text-teal-400 border border-teal-800/50 rounded-lg">${tag}</span>
-                                <span class="text-[10px] text-slate-500 font-mono tracking-wider">${displayDate}</span>
+                                <span class="text-[10px] uppercase font-bold tracking-widest px-3 py-1.5 bg-teal-950/30 text-teal-400 border border-teal-800/50 rounded-lg">${escapeText(tag)}</span>
+                                <span class="text-[10px] text-slate-500 font-mono tracking-wider">${escapeText(displayDate)}</span>
                             </div>
-                            <h3 class="text-2xl font-bold text-slate-200 group-hover:text-teal-400 transition leading-tight mb-4">${realTitle}</h3>
-                            <p class="text-sm text-slate-400 font-light leading-relaxed mb-8 flex-grow whitespace-pre-line">${contentPreview}</p>
+                            <h3 class="text-2xl font-bold text-slate-200 group-hover:text-teal-400 transition leading-tight mb-4">${escapeText(realTitle)}</h3>
+                            <p class="text-sm text-slate-400 font-light leading-relaxed mb-8 flex-grow whitespace-pre-line">${escapeText(contentPreview)}</p>
                             <div class="flex items-center gap-4 pt-6 border-t border-slate-800/60 mt-auto">
                                 <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-teal-500 to-blue-500 p-[1px]">
                                     <div class="w-full h-full bg-[#020617] rounded-xl flex items-center justify-center">
@@ -592,7 +598,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <span class="block text-xs font-bold text-slate-200 tracking-wider">${author}</span>
+                                    <span class="block text-xs font-bold text-slate-200 tracking-wider">${escapeText(author)}</span>
                                     <span class="block text-[9px] text-slate-500 font-mono tracking-widest uppercase">System Core</span>
                                 </div>
                             </div>
@@ -622,43 +628,95 @@
                 }
             });
         }
-        fetchAeroBlog();
+        if (window.Papa) fetchAeroBlog();
 
-        // 🟢 AJAX FORM SUBMISSION (MAKE.COM DIRECT INTEGRATION) 🟢
-        const form = document.getElementById("consultation-form");
-        const successMessage = document.getElementById("form-success");
-
-        if(form) {
-            form.addEventListener("submit", async function(event) {
-                event.preventDefault(); 
-                
-                const submitBtn = form.querySelector('button[type="submit"]');
-                const originalBtnText = submitBtn.innerText;
-                submitBtn.innerText = "Transmitting..."; 
-                
-                const data = new FormData(event.target);
-                
-                try {
-                    const response = await fetch(event.target.action, {
-                        method: form.method,
-                        body: data
-                    });
-                    
-                    if (response.ok) {
-                        form.reset(); 
-                        form.style.display = "none"; 
-                        successMessage.classList.remove("hidden"); 
-                        successMessage.classList.add("flex");
-                    } else {
-                        submitBtn.innerText = "Error - Please Try Again";
-                        setTimeout(() => submitBtn.innerText = originalBtnText, 3000);
-                    }
-                } catch (error) {
-                    submitBtn.innerText = "Network Error - Try Again";
-                    setTimeout(() => submitBtn.innerText = originalBtnText, 3000);
-                }
-            });
+    </script>
+    <script>
+        const headlines = [
+            'AI automation for the work your team repeats every day',
+            'Simplify the processes that slow your business down',
+            'Move paper-based workflows into digital systems',
+            'Build Web3 and crypto solutions for your business',
+            'Build custom AI agents and robotics for your operations',
+            'Turn your business data into better forecasts'
+        ];
+        const headline = document.getElementById('service-headline');
+        const toggle = document.getElementById('toggle-headlines');
+        let headlineIndex = 0;
+        let rotation;
+        function startRotation() {
+            rotation = setInterval(() => {
+                if (document.hidden) return;
+                headlineIndex = (headlineIndex + 1) % headlines.length;
+                headline.textContent = headlines[headlineIndex];
+            }, 10000);
+            toggle.textContent = 'Pause service rotation';
         }
+        toggle.hidden = false;
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            toggle.textContent = 'Start service rotation';
+        } else {
+            startRotation();
+        }
+        toggle.addEventListener('click', () => {
+            if (rotation === undefined) {
+                startRotation();
+            } else {
+                clearInterval(rotation);
+                rotation = undefined;
+                toggle.textContent = 'Resume service rotation';
+            }
+        });
+
+        const form = document.getElementById('consultation-form');
+        const service = form.elements.Service_Requested;
+        const brief = form.elements.Project_Details;
+        const status = document.getElementById('consultation-status');
+        const success = document.getElementById('form-success');
+        const submit = form.querySelector('button[type="submit"]');
+        let generatedBrief = '';
+        service.addEventListener('change', () => {
+            const draft = service.value === 'Help me choose'
+                ? 'Hello AuronixLabs, I’d like a consultation to find the right solution for my business.'
+                : 'Hello AuronixLabs, I’d like to request a consultation for ' + service.value + '.';
+            if (!brief.value.trim() || brief.value === generatedBrief) {
+                brief.value = draft;
+                generatedBrief = draft;
+            } else if (generatedBrief && brief.value.startsWith(generatedBrief)) {
+                brief.value = draft + brief.value.slice(generatedBrief.length);
+                generatedBrief = draft;
+            }
+        });
+
+        form.addEventListener('submit', async event => {
+            event.preventDefault();
+            if (submit.disabled) return;
+            if (!brief.value.trim()) {
+                status.textContent = 'Please enter a short project brief.';
+                brief.focus();
+                return;
+            }
+            submit.disabled = true;
+            submit.textContent = 'Sending…';
+            status.textContent = 'Sending your consultation request.';
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    signal: AbortSignal.timeout(15000)
+                });
+                if (!response.ok) throw new Error('Request failed');
+                form.reset();
+                form.hidden = true;
+                success.classList.replace('hidden', 'flex');
+                success.focus();
+            } catch {
+                status.textContent = 'We couldn’t confirm your request. Your message is still here. Try again or contact us by email.';
+            } finally {
+                submit.disabled = false;
+                submit.textContent = 'Send consultation request';
+            }
+        });
     </script>
 </body>
 </html>
